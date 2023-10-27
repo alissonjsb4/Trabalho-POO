@@ -1,9 +1,8 @@
-public class Laboratório extends Sala{
+public class Laboratorio extends Sala{
   private String EstadoComputador;
   private int QuantidadeComputadores;
-  private int QuantidadeCadeiras;
 
-  public Laboratório(){
-    
+  public Laboratorio(int Computadores){
+    this.QuantidadedeComputadores = Computadores;
   }
 }
