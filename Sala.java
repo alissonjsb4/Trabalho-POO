@@ -1,7 +1,11 @@
 public class Sala{
   private String ArCondicionado;
+  private int QuantidadeDeCadeiras;
 
-  public String setArcondicionado(String estado){
+  public void setQuantidadeDeCadeiras(int Cadeiras){
+    this.QuantidadeDeCadeiras = Cadeiras;
+    }  
+  public void setArcondicionado(String estado){
     this.ArCondicionado = estado;
   }
   public String getArCondicionado{
