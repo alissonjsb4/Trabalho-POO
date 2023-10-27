@@ -12,7 +12,7 @@ public class Sala{
   public int getQuantidadeDeCadeiras(){
     return QuantidadeDeCadeiras;
   }
-  public String getArCondicionado{
+  public String getArCondicionado(){
     return ArCondicionado;
   }
 }
