@@ -5,7 +5,7 @@ public abstract class Usuario{
   private Sessao[] historico;
 
   public void comprarTicket(){}
-  public void comprarTicket(int quantidade){}
+  public void comprarTicket(){}
   public void cancelarCompra(){}
   public Sessao verHistorico(String login){}
 }
