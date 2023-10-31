@@ -6,7 +6,8 @@ import java.awt.event.ActionListener;
 public class Login extends JFrame {
     private TextField campoUser;
     private JPasswordField campoSenha;
-
+    private Color CorBotao = new Color(0, 32, 55);
+    
     public Login(){
         super("CineFlop");
 
@@ -25,9 +26,9 @@ public class Login extends JFrame {
         painel.add(new JLabel(""));
         painel.add(botaologin);
         
-        painel.setBackground(Color.ORANGE);
-        botaologin.setBackground(Color.BLACK);
-        botaologin.setForeground(Color.ORANGE);
+        painel.setBackground(Color.getHSBColor(12, -117, -243));
+        botaologin.setBackground(CorBotao);
+        botaologin.setForeground(Color.getHSBColor(12, -117, -243));
         
 
         add(painel, BorderLayout.CENTER);
