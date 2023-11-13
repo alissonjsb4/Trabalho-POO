@@ -3,18 +3,18 @@ public class Filme{
 	private String titulo;
 	private String diretor;
 	private int classificacao;
-	private boolean tresD;
+	private boolean is3D;
 	private String sinopse;
-	private char faixaAudio;
+	private String audio;
 	private int duracao;
 
 	public Filme(String codigo, 
 		     String titulo, 
 		     String diretor, 
 		     int classificacao, 
-		     boolean tresD, 
+		     boolean is3D, 
 		     String sinopse, 
-		     char faixaAudio, 
+		     String audio, 
 		     int duracao) {
 		this.codigo = codigo;
 		this.titulo = titulo;
@@ -22,7 +22,7 @@ public class Filme{
 		this.classificacao = classificacao;
 		this.tresD = tresD;
 		this.sinopse = sinopse;
-		this.faixaAudio = faixaAudio;
+		this.faixaAudio = audio;
 		this.duracao = duracao;	
 	}
 	public String getCodigo(){
@@ -41,14 +41,14 @@ public class Filme{
 	public int getClassficacao(){
 		return classificacao;
 	}
-	public boolean isTresD(){
-		return tresD;
+	public boolean is3D(){
+		return is3D;
 	}
 	public String getSinopse(){
 		return sinopse;
 	}
-	public char getFaixaAudio(){
-		return faixaAudio;
+	public char getAudio(){
+		return audio;
 	}
 	public int getDuracao(){
 		return duracao;
