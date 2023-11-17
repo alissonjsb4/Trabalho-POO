@@ -9,9 +9,49 @@ public class Sala{
     this.mapaAssentos = new boolean[filas][colunas];
   }
 
-  public void setTodosAssentosLivres(){
+  public void setTodosAssentosLivres() {
+    for (int i = 0; i < mapaAssentos.length; i++) {
+      for (int j = 0; j < mapaAssentos[i].length; j++) {
+        mapaAssentos[i][j] = false;
+      }
+    }
   }
-  public boolean getStatusASsento(){}
-  public boolean isSalaLotada(){}
-  public void reservarAssento(int[][] cadeira){}
+  
+  public boolean getStatusAssento(int fila, int coluna) {
+    if (fila >= 0 && fila < mapaAssentos.length && coluna >= 0 && coluna < mapaAssentos[0].length) {
+      return mapaAssentos[fila][coluna];
+    } else {
+      // Caso os índices sejam invalidos, retorna falso
+      return false;
+    }
+  }
+  
+  public boolean isSalaLotada() {
+    int assentosOcupados = 0;
+    for (int i = 0; i < mapaAssentos.length; i++) {
+      for (int j = 0; j < mapaAssentos[i].length; j++) {
+        if (mapaAssentos[i][j]) {
+          assentosOcupados++;
+        }
+      }
+    }
+    if (assentosOcupados == capacidade)
+      return true;
+    else 
+      return false;
+  }
+  
+  public void reservarAssento(int fila, int coluna) {
+    if (fila >= 0 && fila < mapaAssentos.length && coluna >= 0 && coluna < mapaAssentos[0].length) {
+      if (!mapaAssentos[fila][coluna]) {
+        mapaAssentos[fila][coluna] = true; // Reserva da cadeira
+        System.out.println("Assento na fila " + fila + ", coluna " + coluna + " reservado com sucesso.");
+      } else {
+        System.out.println("Assento na fila " + fila + ", coluna " + coluna + " já está ocupado.");
+      }
+    } else {
+      // Caso os índices sejam invalidos
+      System.out.println("Índices de assento inválidos.");
+    }
+  }
 }
