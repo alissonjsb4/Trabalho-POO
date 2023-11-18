@@ -2,7 +2,10 @@ public class Sala{
   private int salaID;
   private int capacidade;
   private boolean[][] mapaAssentos;
-
+  /*R18.11: (para falar durante a reunião) No método ReservarCadeira, há um sout para printar as coordenadas da cadeira reservada. Contudo, poderíamos colocar
+  isso na função acessível ao usuário que chamará esse método, adaptando as coordenadas para uma numérica e outra "alfabética" (posso pensar em como escrever
+  isso, qualquer coisa).
+  */
   public Sala (int salaID, int filas, int colunas) {
     this.salaID = salaID;
     this.capacidade = filas * colunas;
