@@ -4,8 +4,9 @@ public class Filme{
 	private String diretor;
 	private int classificacao;
 	private boolean is3D;
+	//R18.11: alterei o nome da variável, uma vez que no construtor ela tinha esse formato.
 	private String sinopse;
-	private String audio;
+	private String faixaAudio;
 	private int duracao;
 
 	public Filme(String codigo, 
@@ -20,7 +21,7 @@ public class Filme{
 		this.titulo = titulo;
 		this.diretor = diretor;
 		this.classificacao = classificacao;
-		this.tresD = tresD;
+		this.is3D = is3D;
 		this.sinopse = sinopse;
 		this.faixaAudio = audio;
 		this.duracao = duracao;	
@@ -29,8 +30,15 @@ public class Filme{
 		return codigo;
 	}
 	public String getInfo(){
-		return "Título: "+getTitulo();
-		//terminar esse método
+		if(is3D()){
+		String is3DDisponivel = " ESTÁ ";
+		}
+		else{
+		String is3DDisponivel = " NÃO ESTÁ ";
+		}
+		String info = ("Título: " + getTitulo() + "\n Diretor(a): " + getDiretor() + "\n Classificação Indicativa: " + getClassificacao() + "\n A sessão em questão" + is3DDisponivel + "com 3D disponível!" + "\n Faixa de Áudio: " + getFaixaAudio() + "\n Tempo de Filme: " + getDuracao() + "\n\n Breve sinopse:\n" + getSinopse();
+		return info;
+		//R18.11: creio ter terminado, mas ainda se pode mudar
 	}
 	public String getTitulo(){
 		return titulo;
@@ -38,8 +46,8 @@ public class Filme{
 	public String getDiretor(){
 		return diretor;
 	}
-	public int getClassficacao(){
-		return classificacao;
+	public int getClassificacao(){
+		return classificacao:
 	}
 	public boolean is3D(){
 		return is3D;
