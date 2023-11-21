@@ -12,6 +12,13 @@ public class Sala{
     this.mapaAssentos = new boolean[filas][colunas];
   }
 
+  public boolean existeCadeira(int fila, int coluna){
+    if (fila >= 0 && fila < mapaAssentos.length && coluna >= 0 && coluna < mapaAssentos[0].length) 
+      return true;
+    else
+      return false;
+  }
+  
   public void setTodosAssentosLivres() {
     for (int i = 0; i < mapaAssentos.length; i++) {
       for (int j = 0; j < mapaAssentos[i].length; j++) {
@@ -19,16 +26,15 @@ public class Sala{
       }
     }
   }
-  
+
   public boolean getStatusAssento(int fila, int coluna) {
-    if (fila >= 0 && fila < mapaAssentos.length && coluna >= 0 && coluna < mapaAssentos[0].length) {
+    if (existeCadeira(fila, coluna)) {
       return mapaAssentos[fila][coluna];
     } else {
-      // Caso os índices sejam invalidos, retorna falso
-      return false;
+      throw new IllegalArgumentException("Índices de assento inválidos.");
     }
   }
-  
+
   public boolean isSalaLotada() {
     int assentosOcupados = 0;
     for (int i = 0; i < mapaAssentos.length; i++) {
@@ -43,9 +49,9 @@ public class Sala{
     else 
       return false;
   }
-  
+
   public void reservarAssento(int fila, int coluna) {
-    if (fila >= 0 && fila < mapaAssentos.length && coluna >= 0 && coluna < mapaAssentos[0].length) {
+    if (existeCadeira(fila, coluna)) {
       if (!mapaAssentos[fila][coluna]) {
         mapaAssentos[fila][coluna] = true; // Reserva da cadeira
         System.out.println("Assento na fila " + fila + ", coluna " + coluna + " reservado com sucesso.");
@@ -53,8 +59,20 @@ public class Sala{
         System.out.println("Assento na fila " + fila + ", coluna " + coluna + " já está ocupado.");
       }
     } else {
-      // Caso os índices sejam invalidos
-      System.out.println("Índices de assento inválidos.");
+      throw new IllegalArgumentException("Índices de assento inválidos.");
     }
+  }
+
+  
+  public int getSalaID() {
+    return salaID;
+  }
+
+  public int getCapacidade() {
+    return capacidade;
+  }
+  
+  public boolean[][] getMapaAssentos() {
+    return mapaAssentos;
   }
 }
