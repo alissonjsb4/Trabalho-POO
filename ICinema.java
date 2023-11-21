@@ -1,8 +1,8 @@
-public interface ICinema{
-  public Filme procurarFilme();
-  public Sessao procurarSessao();
-  public Sala procurarSala();
-  public boolean existeFilme();
-  public boolean existeSessao();
-  public boolean existeSala();
+public interface ICinema {
+  public Filme procurarFilme(String codigo);
+  public Sessao procurarSessao(String codigo);
+  public Sala procurarSala(int SalaID);
+  public boolean existeFilme(String codigo);
+  public boolean existeSessao(String codigo);
+  public boolean existeSala(int SalaID);
 }
