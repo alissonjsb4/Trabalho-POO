@@ -1,7 +1,4 @@
-# trabPOO
-
-Trabalho Final POO 2023.2 
-
+# Trabalho Final POO 2023.2 
 ## Grupo
 - MATHEUS ROCHA GOMES DA SILVA - 553496
 - THIAGO SIQUEIRA DE SOUSA - 554576
