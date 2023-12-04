@@ -1,26 +1,10 @@
 # trabPOO
 
-Quem leu é gay 
+Trabalho Final POO 2023.2 
 
-## Cliente
-\- nome
-
-\- login
-
-\- senha
-
-## Sala de Cinema
-\- numeroSala 
-
-\- capacidadeAssentos
-
-\- listaAssentos
-
-\+ setTodosAssentosDisponiveis( )
-
-\+ getStatusAssento( )
-
-\+ isSalaLotada( )
-
-\+ reservarAssento( )
-
+## Grupo
+- MATHEUS ROCHA GOMES DA SILVA - 553496
+- THIAGO SIQUEIRA DE SOUSA - 554576
+- CARLOS VINICIUS DOS SANTOS MESQUITA = 558171
+- ALISSON JAIME SALES BARROS - 555083
+- JOSÉ FERREIRA LESSA - 553886
